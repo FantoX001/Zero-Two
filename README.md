@@ -16,7 +16,7 @@ A Fully Modular, fast and Efficient Bot. <br>
 Deply Zero Two form Heroku
 
 
-<br>[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/FantoX001/Zero-Two)
+<br>[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/saramkhani/Zero-Two)
 <br/><br/>
 
 
