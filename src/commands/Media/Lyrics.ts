@@ -35,7 +35,7 @@ export default class Command extends BaseCommand {
     }
     //if(search.error) return void M.reply(`Couldn't find any matching song results.`)
     const lyrics = await search[0].lyrics();
-    let text = `✨ *Title: ${search[0].title}*\n\n`;
+    let text = `🎀 *Title: ${search[0].title}*\n\n`;
     text += `🌐 *URL: ${search[0].url}*\n`;
     await M.reply(
       await this.client.getBuffer(search[0].image),
@@ -59,7 +59,7 @@ export default class Command extends BaseCommand {
             body: `Author : ${videos[0].author.name.substr(
               0,
               20
-            )}\n🍭 Zero Two 🍭`,
+            )}\n🌟 Saram Bot 🌟`,
             mediaType: 2,
             thumbnail: await this.client.getBuffer(videos[0].image),
             mediaUrl: videos[0].url,
