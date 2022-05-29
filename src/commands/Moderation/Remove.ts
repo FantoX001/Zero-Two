@@ -12,7 +12,7 @@ export default class Command extends BaseCommand {
             description: 'removes the mentioned users',
             category: 'moderation',
             usage: `${client.config.prefix}remove [@mention | tag]`,
-            baseXp: 10
+            baseXp: 500
         })
     }
 
