@@ -16,7 +16,7 @@ export default class Command extends BaseCommand {
 			category: "utils",
 			usage: `${client.config.prefix}getgif [term]`,
 			aliases: ["gif"],
-			baseXp: 40,
+			baseXp: 300,
 		});
 	}
 
