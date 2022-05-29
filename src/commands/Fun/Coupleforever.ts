@@ -14,7 +14,7 @@ export default class Command extends BaseCommand {
             aliases: ['matchpfp','micon'],
             category: 'fun',
             usage: `${client.config.prefix}micon`,
-            baseXp: 10
+            baseXp: 500
         })
     }
 
