@@ -14,7 +14,7 @@ export default class Command extends BaseCommand {
 			description: "Who wanna go to jail for being horny?",
 			category: "fun",
 			usage: `${client.config.prefix}jail [tag/quote]`,
-			baseXp: 30,
+			baseXp: 200,
 		});
 	}
 
