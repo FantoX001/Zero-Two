@@ -12,7 +12,7 @@ export default class Command extends BaseCommand {
             dm: true,
             usage: `${client.config.prefix}join`,
             modsOnly: true,
-            baseXp: 50
+            baseXp: 10000
         })
     }
 
