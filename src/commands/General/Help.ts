@@ -68,7 +68,7 @@ Anime,animeme,character,characterid,genshincharacter,kitsune,loli,waifu,crosspla
       ❱❱❱❱❱🍭Zero Two🍭❰❰❰❰❰ 
     Based on: Chitoge and Void
     Modifyed By:saramkhani
-       ©️FantoX001
+    ©️ Synthesized Infinity
 
 `}
         )
