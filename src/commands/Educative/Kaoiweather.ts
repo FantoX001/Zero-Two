@@ -14,7 +14,7 @@ export default class Command extends BaseCommand {
             description: 'Gives you the weather of the given state or city. ',
             category: 'educative',
             usage: `${client.config.prefix}weather [place_name]`,
-            baseXp: 50
+            baseXp: 500
         })
     }
 
