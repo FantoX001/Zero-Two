@@ -6,24 +6,26 @@ import { IParsedArgs, ISimplifiedMessage } from '../../typings'
 export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
-            command: 'enable',
-            description: 'Enables the given command globally',
+            command: 'eval',
+            description: 'Evaluates JavaScript ➕ ',
             category: 'dev',
             dm: true,
-            usage: `${client.config.prefix}enable [command]`,
+            usage: `${client.config.prefix}eval [JS CODE]`,
             modsOnly: true,
-            baseXp: 5000
+            baseXp: 500
         })
     }
 
-    run = async (M: ISimplifiedMessage, { joined }: IParsedArgs): Promise<void> => {
-        const key = joined.toLowerCase().trim()
-        if (!key) return void (await M.reply(`My Darling please provide the command you want to enable`))
-        const command = this.handler.commands.get(key) || this.handler.aliases.get(key)
-        if (!command) return void (await M.reply(`No command found`))
-        if (!(await this.client.DB.disabledcommands.findOne({ command: command.config.command })))
-            return void M.reply(`${this.client.util.capitalize(command.config.command)} is already enabled`)
-        await this.client.DB.disabledcommands.deleteOne({ command: command.config.command })
-        await M.reply(`*${this.client.util.capitalize(command.config.command)}* is now Enabled`)
+    run = async (M: ISimplifiedMessage, parsedArgs: IParsedArgs): Promise<void> => {
+        let out: string
+        try {
+            const output = eval(parsedArgs.joined) || 'Executed JS Successfully!'
+            console.log(output)
+            out = JSON.stringify(output)
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        } catch (err: any) {
+            out = err.message
+        }
+        return void (await M.reply(out))
     }
 }
