@@ -31,39 +31,39 @@ export default class Command extends BaseCommand {
 🌠 𝕆𝕗𝕗𝕚𝕥𝕚𝕒𝕝 𝕊𝕦𝕡𝕡𝕠𝕣𝕥 𝔾𝕣𝕠𝕦𝕡: https://goo.su/EZjhEz  
 🌠 𝕋𝕠 𝕛𝕠𝕚𝕟: use #sᴜᴘᴘᴏʀᴛ
 
-❱❱❱❱❱🔪zero-Two Bot🔪❰❰❰❰❰ 
+     ❱❱❱❱❱🎡🔪zero-Two Bot🔪🎡❰❰❰❰❰ 
 
-🧧🎡Coding🎡🧧
+❱❱❱❱❱🧧✨Coding✨🧧❰❰❰❰❰ 
 •github
 
-🧧🎡Educative Tools🎡🧧
+❱❱❱❱❱🧧✨Educative Tools✨🧧❰❰❰❰❰ 
 •Brainly,calculator,crypto,element,ip,weather,trivia,urbandictionary 
 
-🧧🎡For Fun🎡🧧
+❱❱❱❱❱🧧✨For Fun✨🧧❰❰❰❰❰ 
 •Ppcouple,fact,jail,joke,quote,rip,react,ship,trash,trigger,baka,wanted,why,dare,truth,wasted,chat,doge 
 
-🧧🎡Games🎡🧧
+❱❱❱❱❱🧧✨Games✨🧧❰❰❰❰❰ 
 •chess
 
-🧧🎡General Commands🎡🧧
+❱❱❱❱❱🧧✨General Commands✨🧧❰❰❰❰❰ 
 •admins,exp,help,hi,info,invitelink,mods,profile,rank,support,zerotwo 
 
-🧧🎡Media🎡🧧
+❱❱❱❱❱🧧✨Media✨🧧❰❰❰❰❰ 
 •Karaoke,lyrics,play,spotify,ytaudio,ytvideo,ytsearch,iguser,igdl,tiktok,video,pinterest,toimg 
 
-🧧🎡Admins Only🎡🧧
+❱❱❱❱❱🧧✨Admins Only✨🧧❰❰❰❰❰ 
 •Activate,deactivate,open,close,promote,demote,delete,everyone,groupchange,revoke,remove,purge 
 
-🧧🎡Nature🎡🧧
+❱❱❱❱❱🧧✨Nature✨🧧❰❰❰❰❰ 
 •fox
 
-🧧🎡Utilities🎡🧧
+❱❱❱❱❱🧧✨Utilities✨🧧❰❰❰❰❰ 
 •Blur,circle,gif,google,retrieve,screenshot,steal,sticker,stickersearch,subred,translate,wikipedia,amazon,shorturl 
 
-🧧🎡Weeb🎡🧧
+❱❱❱❱❱🧧✨Weeb✨🧧❰❰❰❰❰ 
 Anime,animeme,character,characterid,genshincharacter,kitsune,waifu,crossplay,neko,manga,pokemon,sauce,vtuber,megumin,waifu,wallpaper,randomwallpaper
    	
-     ❱❱❱❱❱🍭🎡Zero Two🎡🍭❰❰❰❰❰ 
+     ❱❱❱❱❱🍭🎡✨Zero Two✨🎡🍭❰❰❰❰❰ 
     Based on: Chitoge and Void
        Modifyed By: 𝕊𝔸ℝ𝔸𝕄
     ©️ Synthesized Infinity
