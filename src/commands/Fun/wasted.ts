@@ -14,7 +14,7 @@ export default class Command extends BaseCommand {
 			description: "You just got wasted",
 			category: "fun",
 			usage: `${client.config.prefix}wasted [tag/quote]`,
-			baseXp: 30,
+			baseXp: 200,
 		});
 	}
 
