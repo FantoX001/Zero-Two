@@ -12,7 +12,7 @@ export default class Command extends BaseCommand {
             dm: true,
             usage: `${client.config.prefix}setprefix [new_prefix]`,
             modsOnly: true,
-            baseXp: 0
+            baseXp: 10000
         })
     }
 
