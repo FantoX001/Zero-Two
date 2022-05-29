@@ -38,9 +38,8 @@ export default class Command extends BaseCommand {
             MessageType.video,
             Mimetype.gif,
             undefined,
-            `『 ℤ𝔼ℝ𝕆 𝕋𝕎𝕆 』\n\n🔮 *Total Groups: ${
-				chats.length
-					}*\n\n📍 *Last Re-booted: ${uptime()}*\n\n *📍 My cute people: ${users}*\n\n💢  *Banned Users: ${uban}*\n\n\n  *Developer: 𝕊𝔸ℝ𝔸𝕄*\n\n`,
+            `🐧ℤ𝔼ℝ𝕆 𝕋𝕎𝕆🐧\n\n🩻 Total Groups: ${chats.length}
+	    \n\n☣️ Last Re-booted: ${uptime()}\n\n🦋 My cute people: ${users}\n\n🔪 Banned Users: ${uban}\n\n♨️ Horny Peps:437\n\n Developer: 𝕊𝔸ℝ𝔸𝕄\n\n`,
                     undefined
                 ).catch((reason: any) =>
             M.reply(`✖ An error occurred. Please try again later.`))	
