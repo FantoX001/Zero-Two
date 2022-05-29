@@ -24,9 +24,7 @@ export default class Command extends BaseCommand {
         let zerotwo = n[Math.floor(Math.random() * n.length)]
         return void this.client.sendMessage(M.from, { url: zerotwo }, MessageType.video, {quoted:M.WAMessage,
             mimetype: Mimetype.gif,
-            caption:`
-            caption:`
-                                                                                          
+            caption:`                                                                   
 💫 𝕌𝕤𝕖𝕣: *${M.sender.username}*  
 💫 ℙ𝕣𝕖𝕗𝕚𝕩: ${this.client.config.prefix} 
 💫 𝕆𝕨𝕟𝕖𝕣: *${this.client.config.prefix}mod*
