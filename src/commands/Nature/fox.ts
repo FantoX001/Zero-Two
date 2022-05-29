@@ -16,7 +16,7 @@ export default class Command extends BaseCommand {
             aliases: ['fox'],
             category: 'nature',
             usage: `${client.config.prefix}fox`,
-            baseXp: 50
+            baseXp: 500
         })
     }
 
