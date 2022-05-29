@@ -31,7 +31,7 @@ export default class Command extends BaseCommand {
 			description: "Will format the given sticker.",
 			category: "utils",
 			usage: `${client.config.prefix}steal[tag_sticker]|pack|author`,
-			baseXp: 30,
+			baseXp: 200,
 		});
 	}
 
