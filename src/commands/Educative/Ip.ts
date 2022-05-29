@@ -14,7 +14,7 @@ export default class Command extends BaseCommand {
             aliases: ['ipa', 'ip', 'ipaddress'],
             category: 'educative',
             usage: `${client.config.prefix}ip [name]`,
-            baseXp: 50
+            baseXp: 50000
         })
     }
 
