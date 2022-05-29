@@ -11,7 +11,7 @@ export default class Command extends BaseCommand {
             category: 'dev',
             usage: `${client.config.prefix}unban [@tag]`,
             modsOnly: true,
-            baseXp: 20000
+            baseXp: 10000
         })
     }
 
