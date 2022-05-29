@@ -14,7 +14,7 @@ export default class Command extends BaseCommand {
 			description: "Will translate the given word to your selected language. ",
 			category: "utils",
 			usage: `${client.config.prefix}tr <word>|<language_code>\n\nExample: ${client.config.prefix}tr zh-cn|Hello`,
-			baseXp: 40,
+			baseXp: 100,
 		});
 	}
 
