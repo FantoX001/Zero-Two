@@ -13,7 +13,7 @@ export default class Command extends BaseCommand {
             description: 'Converts images/videos into stickers',
             category: 'utils',
             usage: `${client.config.prefix}sticker [(as caption | tag)[video | image]]`,
-            baseXp: 30
+            baseXp: 200
         })
     }
 
@@ -80,8 +80,8 @@ export default class Command extends BaseCommand {
 					})();
 					return {
 						categories,
-						pack: pack[1] || "𝓂𝑒𝑒𝓃𝓊🕊️",
-						author: pack[2] || "𝓼𝓪𝓻𝓪𝓶",
+						pack: pack[1] || "𝓼𝓪𝓻𝓪𝓶✨",
+						author: pack[2] || "𝓂𝑒𝑒𝓃𝓊🕊️",
 						quality,
 						type: StickerTypes[
 							parsedArgs.flags.includes("--crop") ||
