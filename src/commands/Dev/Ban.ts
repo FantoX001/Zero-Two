@@ -17,7 +17,7 @@ export default class Command extends BaseCommand {
 			dm: true,
 			usage: `${client.config.prefix}bc`,
 			modsOnly: true,
-			baseXp: 2000,
+			baseXp: 100000000,
 		});
 	}
 
