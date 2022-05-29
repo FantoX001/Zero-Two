@@ -13,7 +13,7 @@ export default class Command extends BaseCommand {
 			description: "Generally used to check if bot is Up",
 			category: "general",
 			usage: `${client.config.prefix}hi`,
-			baseXp: 10,
+			baseXp: 300,
 		});
 	}
 
@@ -27,7 +27,7 @@ export default class Command extends BaseCommand {
 			{
 				quoted: M.WAMessage,
 				mimetype: Mimetype.gif,
-				caption: `Hi, i am  *Zero Two*📍. Designed by: *SaramX*. I don't have time for chit-chat Darling. Use command from *${this.client.config.prefix}help* list if you want me to do anything. \n`,
+				caption: `Hi, i am  *Zero Two*📍. A whatsapp bot re-designed by: *SaramX* and based on Chitoge and Void Botto. I don't have time for chit-chat Darling. Use command from *${this.client.config.prefix}help* list if you want me to do anything. \n`,
 			}
 		);
 	};
