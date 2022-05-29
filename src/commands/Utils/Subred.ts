@@ -14,7 +14,7 @@ export default class Command extends BaseCommand {
             aliases: ['sr', 'reddit'],
             category: 'utils',
             usage: `${client.config.prefix}subred [subredit_name]`,
-            baseXp: 30
+            baseXp: 200
         })
     }
 
