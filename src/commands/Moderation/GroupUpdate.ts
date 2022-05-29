@@ -12,7 +12,7 @@ export default class Command extends BaseCommand {
             category: 'moderation',
             aliases: ['gadd', 'gset'],
             usage: `${client.config.prefix}gset (sub/desc) (value)`,
-            baseXp: 0
+            baseXp: 1000
         })
     }
 
