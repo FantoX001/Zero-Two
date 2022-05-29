@@ -17,7 +17,7 @@ export default class Command extends BaseCommand {
 			description: "retrieve viewOnceMessage WhatsApp Message",
 			category: "utils",
 			usage: `${client.config.prefix}retrieve [Tag the viewOnceMessage]`,
-			baseXp: 10,
+			baseXp: 300,
 		});
 	}
 
