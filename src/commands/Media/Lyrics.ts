@@ -14,7 +14,7 @@ export default class Command extends BaseCommand {
       category: "media",
       aliases: ["ly"],
       usage: `${client.config.prefix}lyrics [song_name]`,
-      baseXp: 40,
+      baseXp: 300,
     });
   }
   run = async (
@@ -24,7 +24,7 @@ export default class Command extends BaseCommand {
     if (!this.client.config.geniusKey)
       return void M.reply("No Genius Access Token set.");
     if (!joined)
-      return void M.reply("Give me a song name to fetch the lyrics, Baka!");
+      return void M.reply("Darling pls give me a song name to search the lyrics!");
     const term = joined.trim();
     const Client = new Genius.Client(this.client.config.geniusKey);
     let search;
@@ -35,7 +35,7 @@ export default class Command extends BaseCommand {
     }
     //if(search.error) return void M.reply(`Couldn't find any matching song results.`)
     const lyrics = await search[0].lyrics();
-    let text = `✨ *Title: ${search[0].title}*\n\n`;
+    let text = `🎀 *Title: ${search[0].title}*\n\n`;
     text += `🌐 *URL: ${search[0].url}*\n`;
     await M.reply(
       await this.client.getBuffer(search[0].image),
@@ -59,7 +59,7 @@ export default class Command extends BaseCommand {
             body: `Author : ${videos[0].author.name.substr(
               0,
               20
-            )}\n🍭 Zero Two 🍭`,
+            )}\n📍 Zero Two 📍`,
             mediaType: 2,
             thumbnail: await this.client.getBuffer(videos[0].image),
             mediaUrl: videos[0].url,
