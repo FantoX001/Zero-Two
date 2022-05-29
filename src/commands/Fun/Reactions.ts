@@ -40,7 +40,7 @@ export default class Command extends BaseCommand {
             ],
             category: 'fun',
             usage: `${client.config.prefix}(reaction) [tag/quote users]\nExample: ${client.config.prefix}pat`,
-            baseXp: 10
+            baseXp: 200
         })
     }
 
