@@ -19,7 +19,7 @@ export default class Command extends BaseCommand {
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
         const n = [
-            'https://c.tenor.com/dEYkyvVk4OQAAAPo/lol.mp4'
+          'https://c.tenor.com/dEYkyvVk4OQAAAPo/lol.mp4'
         ]
         let zerotwo = n[Math.floor(Math.random() * n.length)]
         return void this.client.sendMessage(M.from, { url: zerotwo }, MessageType.video, {quoted:M.WAMessage,
