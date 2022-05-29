@@ -14,7 +14,7 @@ export default class Command extends BaseCommand {
             category: 'media',
             aliases: ['video'],
             usage: `${client.config.prefix}play2 [term]`,
-            baseXp: 20
+            baseXp: 500
         })
     }
 
