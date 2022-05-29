@@ -13,7 +13,7 @@ export default class Command extends BaseCommand {
             category: 'media',
             aliases: ['sing'],
             usage: `${client.config.prefix}karaoke [term]`,
-            baseXp: 20
+            baseXp: 300
         })
     }
 
