@@ -29,7 +29,7 @@ export default class Command extends BaseCommand {
 🌠 ℙ𝕣𝕖𝕗𝕚𝕩: ${this.client.config.prefix} 
 🌠 𝕆𝕨𝕟𝕖𝕣: *${this.client.config.prefix}mod*
 🌠 𝕆𝕗𝕗𝕚𝕥𝕚𝕒𝕝 𝕊𝕦𝕡𝕡𝕠𝕣𝕥 𝔾𝕣𝕠𝕦𝕡: https://goo.su/EZjhEz  
-🌠 𝕋𝕠 𝕛𝕠𝕚𝕟: use #sᴜᴘᴘᴏʀᴛ ᴛᴏ ᴊᴏɪɴ
+🌠 𝕋𝕠 𝕛𝕠𝕚𝕟: use #sᴜᴘᴘᴏʀᴛ
 
 ❱❱❱❱❱🔪zero-Two Bot🔪❰❰❰❰❰ 
 
@@ -61,11 +61,11 @@ export default class Command extends BaseCommand {
 •Blur,circle,gif,google,retrieve,screenshot,steal,sticker,stickersearch,subred,translate,wikipedia,amazon,shorturl 
 
 🧧🎡Weeb🎡🧧
-Anime,animeme,character,characterid,genshincharacter,kitsune,loli,waifu,crossplay,neko,manga,pokemon,sauce,vtuber,megumin,waifu,wallpaper,randomwallpaper
+Anime,animeme,character,characterid,genshincharacter,kitsune,waifu,crossplay,neko,manga,pokemon,sauce,vtuber,megumin,waifu,wallpaper,randomwallpaper
    	
-      ❱❱❱❱❱🍭🎡Zero Two🎡🍭❰❰❰❰❰ 
+     ❱❱❱❱❱🍭🎡Zero Two🎡🍭❰❰❰❰❰ 
     Based on: Chitoge and Void
-    Modifyed By:saramkhani
+       Modifyed By: 𝕊𝔸ℝ𝔸𝕄
     ©️ Synthesized Infinity
 
 `}
