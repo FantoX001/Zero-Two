@@ -13,7 +13,7 @@ export default class Command extends BaseCommand {
             description: 'Downloads given spotify track and sends it as Audio',
             category: 'media',
             usage: `${client.config.prefix}spotify [URL]`,
-            baseXp: 20,
+            baseXp: 500,
             aliases: ['sp']
         })
     }
