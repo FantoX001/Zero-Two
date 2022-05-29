@@ -1,124 +1,33 @@
-/** @format */
-
-import MessageHandler from "../../Handlers/MessageHandler";
-import BaseCommand from "../../lib/BaseCommand";
-import WAClient from "../../lib/WAClient";
-import { IParsedArgs, ISimplifiedMessage } from "../../typings";
-import { MessageType, Mimetype } from "@adiwajshing/baileys";
-import { Sticker, Categories, StickerTypes } from "wa-sticker-formatter";
+import MessageHandler from '../../Handlers/MessageHandler'
+import BaseCommand from '../../lib/BaseCommand'
+import WAClient from '../../lib/WAClient'
+import { ISimplifiedMessage } from '../../typings'
 
 export default class Command extends BaseCommand {
-  constructor(client: WAClient, handler: MessageHandler) {
-    super(client, handler, {
-      command: "everyone",
-      description: "Tags all users in group chat",
-      aliases: ["all", "tagall", "ping"],
-      category: "moderation",
-      usage: `${client.config.prefix}everyone`,
-      adminOnly: true,
-      baseXp: 500,
-    });
-  }
-
-  run = async (
-    M: ISimplifiedMessage,
-    { joined, flags }: IParsedArgs
-  ): Promise<void> => {
-    flags.forEach((flag) => (joined = joined.replace(flag, "")));
-    const members = await (
-      await this.client.groupMetadata(M.from)
-    ).participants;
-    const stickers = [
-      "https://wallpapercave.com/wp/wp8514496.jpg",
-      "https://wallpapercave.com/wp/wp8888759.jpg",
-      "https://wallpapercave.com/wp/wp8888747.jpg",
-      "https://wallpapercave.com/wp/wp6786949.jpg",
-      "https://wallpapercave.com/wp/wp8736653.jpg",
-      "https://wallpapercave.com/wp/wp8301235.png",
-    ];
-    const random = stickers[Math.floor(Math.random() * stickers.length)];
-    if (flags.includes("--s") || flags.includes("--sticker")) {
-      const sticker: any = await new Sticker(random, {
-        pack: "READ QUOTED MESSAGE",
-        author: "📍 Zero Two 📍",
-        quality: 90,
-        type: "default",
-        categories: ["🎊"],
-      });
-      return void (await M.reply(
-        await sticker.build(),
-        MessageType.sticker,
-        Mimetype.webp,
-        M.groupMetadata?.participants.map((user) => user.jid)
-      ));
-    } else if (flags.includes("--h") || flags.includes("--hide")) {
-      return void (await M.reply(
-        `*🎀 Group: ${M.groupMetadata?.subject}*\n🎏 *Members: ${
-          members.length
-        }*\n📢 *Announcer: @${M.sender.jid.split("@")[0]}*\n🧧 *Tags: HIDDEN*`,
-        undefined,
-        undefined,
-        M.groupMetadata?.participants.map((user) => user.jid)
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      ).catch((reason: any) =>
-        M.reply(`✖️ An error occurred, Reason: ${reason}`)
-      ));
-    } else {
-      interface metadata {
-        mods: string[];
-        admins: string[];
-        others: string[];
-      }
-      const metadata: metadata = {
-        mods: [],
-        admins: [],
-        others: [],
-      };
-      for (const i of members) {
-        if (i.jid === M.sender.jid) continue;
-        if (!this.client.config.mods?.includes(i.jid)) continue;
-        metadata.mods.push(i.jid);
-      }
-      for (const a of members) {
-        if (a.jid === M.sender.jid) continue;
-        if (this.client.config.mods?.includes(a.jid)) continue;
-        if (!a.isAdmin) continue;
-        metadata.admins.push(a.jid);
-      }
-      for (const k of members) {
-        if (k.jid === M.sender.jid) continue;
-        if (this.client.config.mods?.includes(k.jid)) continue;
-        if (k.isAdmin) continue;
-        metadata.others.push(k.jid);
-      }
-      let text = `*🎀 Group: ${M.groupMetadata?.subject}*\n🎏 *Members: ${
-        members.length
-      }*\n📢 *Announcer: @${M.sender.jid.split("@")[0]}*\n🧧 *Tags:*`;
-      if (metadata.mods.length > 0) {
-        for (const Mods of metadata.mods) {
-          text += `\n🏅 *@${Mods.split("@")[0]}*`;
-        }
-      }
-     // text += `\n`;
-      if (metadata.admins.length > 0) {
-        text += `\n`;
-        for (const admins of metadata.admins) {
-          text += `\n👑 *@${admins.split("@")[0]}*`;
-        }
-      }
-     // text += `\n`;
-      if (metadata.others.length > 0) {
-        text += `\n`;
-        for (const others of metadata.others) {
-          text += `\n🎗 *@${others.split("@")[0]}*`;
-        }
-      }
-      return void M.reply(
-        text,
-        MessageType.text,
-        undefined,
-        M.groupMetadata?.participants.map((user) => user.jid)
-      );
+    constructor(client: WAClient, handler: MessageHandler) {
+        super(client, handler, {
+            adminOnly: true,
+            command: 'demote',
+            description: 'demotes the mentioned users',
+            category: 'moderation',
+            usage: `${client.config.prefix}demote [mention | @tag]`,
+            baseXp: 500
+        })
     }
-  };
+
+    run = async (M: ISimplifiedMessage): Promise<void> => {
+        if (!M.groupMetadata?.admins?.includes(this.client.user.jid))
+            return void M.reply(`📍 Darling tell me, how can I Demote someone without being an Admin?`)
+        if (M.quoted?.sender) M.mentioned.push(M.quoted.sender)
+        if (!M.mentioned.length) return void M.reply(`Tag the users you want to ${this.config.command}`)
+        M.mentioned.forEach(async (user) => {
+            const usr = this.client.contacts[user]
+            const username = usr.notify || usr.vname || usr.name || user.split('@')[0]
+            if (!M.groupMetadata?.admins?.includes(user)) M.reply(`✖ Skipped *${username}* as they're not an admin`)
+            else if (user !== this.client.user.jid) {
+                await this.client.groupDemoteAdmin(M.from, [user])
+                M.reply(`➰ Successfully Demoted *${username}*`)
+            }
+        })
+    }
 }
