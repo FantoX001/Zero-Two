@@ -13,7 +13,7 @@ export default class Command extends BaseCommand {
 			description: "Revokes the group link.",
 			category: "moderation",
 			usage: `${client.config.prefix}revoke`,
-			baseXp: 0,
+			baseXp: 500,
 		});
 	}
 
