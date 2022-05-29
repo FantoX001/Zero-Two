@@ -14,7 +14,7 @@ export default class Command extends BaseCommand {
 			description: "Well... make someone wanted",
 			category: "fun",
 			usage: `${client.config.prefix}wanted [tag/quote]`,
-			baseXp: 30,
+			baseXp: 200,
 		});
 	}
 
