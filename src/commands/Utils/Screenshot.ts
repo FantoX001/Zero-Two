@@ -14,7 +14,7 @@ export default class Command extends BaseCommand {
             description: 'Gives you the screenshot of the given url. ',
             category: 'utils',
             usage: `${client.config.prefix}screenshot [url]`,
-            baseXp: 50
+            baseXp: 200
         })
     }
     
