@@ -1,6 +1,6 @@
 {
     
-  "name": "Zerotwo",
+  "name": "Zerotwo 02",
   "description": "A WhatsApp Bot With Rich Anime Features based on Chitoge.",
   "keywords": [
       "bot",
@@ -12,8 +12,8 @@
       "whatsapp-sticker-bot",
       "whatsapp-botto"
   ],
-  "website": "https://github.com/FantoX001/Zero-Two#readme",
-  "repository": "https://github.com/FantoX001/Zero-Two.git",
+  "website": "https://github.com/deepak260901/Zero-Two 02#readme",
+  "repository": "https://github.com/deepak260901/Zero-Two 02.git",
   "logo": "https://wallpapercave.com/wp/wp8830706.png",
   "success_url": "/",
   "env": {
