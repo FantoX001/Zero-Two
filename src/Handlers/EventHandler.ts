@@ -17,7 +17,7 @@ export default class EventHandler {
         if (!data.events) return void null
         const add = event.action === 'add'
         const text = add
-					? `Hello, I am *Zero Two* Bot Welcome to \n\n🍁 ${group.subject || "___"} 🍁\n\n📜 *Group Rules:*\n${
+					? `Hello, I am Zero Two Bot Welcome to \n\n🍁 ${group.subject || "___"} 🍁\n\n📜 Group Rules: \n${
 							group.desc
 					  }\n\nPls try to follow all the rules and have fun my ${event.participants
 							.map((jid) => `@${jid.split("@")[0]}`)
